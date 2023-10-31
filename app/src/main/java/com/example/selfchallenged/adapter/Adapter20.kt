@@ -1,25 +1,26 @@
 package com.example.selfchallenged.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.selfchallenged.R
+import com.example.selfchallenged.databinding.ViewHouseBinding
 import com.example.selfchallenged.model.House
 
 class Adapter20(private var list20: List<House>): RecyclerView.Adapter<Adapter20.ViewHolder20>() {
 
-    class ViewHolder20(itemView20: View): RecyclerView.ViewHolder(itemView20){
-        val name20: TextView = itemView20.findViewById(R.id.house)
-        val loc20: TextView = itemView20.findViewById(R.id.location)
-        val price20: TextView = itemView20.findViewById(R.id.price)
+    class ViewHolder20(private val binding: ViewHouseBinding): RecyclerView.ViewHolder(binding.root){
+        fun bind(item: House) {
+            binding.house.text = item.name
+            binding.location.text = item.location
+            binding.price.text = item.price
+            binding.executePendingBindings()
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder20 {
         val view20 = LayoutInflater.from(parent.context)
-            .inflate(R.layout.view_house, parent, false)
-        return ViewHolder20(view20)
+        val binding = ViewHouseBinding.inflate(view20, parent, false)
+        return ViewHolder20(binding)
     }
 
     override fun getItemCount(): Int {
@@ -27,10 +28,8 @@ class Adapter20(private var list20: List<House>): RecyclerView.Adapter<Adapter20
     }
 
     override fun onBindViewHolder(holder: ViewHolder20, position: Int) {
-        val sample20 = list20[position]
-        holder.name20.text = sample20.name
-        holder.loc20.text = sample20.location
-        holder.price20.text = sample20.price
+        val item = list20[position]
+        holder.bind(item)
     }
 
 }

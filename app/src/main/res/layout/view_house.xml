@@ -1,36 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
-    android:layout_height="100dp"
-    android:layout_gravity="center">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="house"
+            type="com.example.selfchallenged.model.House" />
+    </data>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@color/purple_200">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/house"
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="House Name"
-            android:gravity="center"
-            android:textSize="20sp"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Location"
-            android:textSize="18sp"/>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/price"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Price"
-            android:textSize="18sp"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/house"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="house"
+                android:gravity="center"
+                android:textSize="20sp" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="location"
+                android:textSize="18sp" />
 
-</androidx.cardview.widget.CardView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="price"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</layout>
