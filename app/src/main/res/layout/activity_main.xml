@@ -7,13 +7,13 @@
     <data>
         <variable
             name="viewmodelMain"
-            type="com.example.selfchallenged.HouseViewModel" />
+            type="com.example.selfchallenged.ui.dashboard.HouseViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".ui.dashboard.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

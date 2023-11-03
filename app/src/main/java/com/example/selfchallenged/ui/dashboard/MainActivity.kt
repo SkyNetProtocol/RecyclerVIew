@@ -1,11 +1,10 @@
-package com.example.selfchallenged
+package com.example.selfchallenged.ui.dashboard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.selfchallenged.adapter.Adapter20
 import com.example.selfchallenged.databinding.ActivityMainBinding
 import com.example.selfchallenged.model.House
